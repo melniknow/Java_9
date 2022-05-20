@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -44,8 +43,8 @@ class LambdaDemoTest {
         assertTrue(LambdaRunner.run(LambdaDemo.equalsLastName, h1, s2));
         assertFalse(LambdaRunner.run(LambdaDemo.equalsLastName, h1, h3));
 
-        List<Human> list1 = new ArrayList<>(3);
-        List<Human> list2 = new ArrayList<>(3);
+        var list1 = new ArrayList<Human>(3);
+        var list2 = new ArrayList<Human>(3);
         list1.add(h1); list1.add(s1); list1.add(h3);
         list2.add(s1); list2.add(s2); list2.add(h2);
         assertTrue(LambdaRunner.run(LambdaDemo.isYoungerMaxAge, list1, 24));
